@@ -1,0 +1,48 @@
+//write a function to return maximum profit that can be made on the list of transaction(gold prices) with one by transaction with one scell transaction
+
+package hhh;
+
+import java.util.Scanner;
+
+public class pro8 {
+	 public static void main(String[] args) {
+		 Scanner sc = new Scanner(System.in);
+		 System.out.println("enter the total days:");
+		 int days=sc.nextInt();
+		 int[]arr=new int[days];
+		 System.out.println("enter the array elements:");
+		 for(int i=0;i<days;i++) {
+			 arr[i]=sc.nextInt();
+			 
+		 }
+		 int minPrice=Integer.MAX_VALUE;
+		 int maxProfit=0;
+		 int buyprice=0;
+		 int sellprice=0;
+		 for(int i=0;i<days;i++) {
+			 if(arr[i]<minPrice) {
+				 minPrice=arr[i];
+				 
+				 
+			 }else if(arr[i]-minPrice>maxProfit) {
+				 maxProfit=arr[i]-minPrice;
+				 buyprice=minPrice;
+				 sellprice=arr[i];
+		 
+				 
+			 }
+		 }
+		 System.out.println("maximum profit is:"+maxProfit);
+		 System.out.println("minimum purchase is:"+buyprice);
+		 
+		 System.out.println("maximum selling is:"+sellprice);
+		 sc.close();
+		 
+		 
+		 
+		 
+			
+		 
+	 }
+
+}
