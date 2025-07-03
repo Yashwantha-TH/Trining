@@ -1,0 +1,34 @@
+//a group football players are sitting in acircle with jerrsy numbers 10 20 30 40 and 50 and there corrsponding seat numbers are 
+//10->1 20->2 30->3 40->4 & 50->5the foot ball players shift there posithion to right hand sidefor n 
+//1)print the arrangement of the foot baller after n shifts
+//2)return seat number of a given gerssy number of n shifts
+
+package hhh;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class pro9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner sc = new Scanner(System.in);
+		 System.out.println("enter the number of shifts :");
+		 int n=sc.nextInt();
+	
+		 int k=0;
+		 int[]arr= {10,20,30,40,50};
+		 int len=arr.length;
+	
+		 for(int i=0;i<n;i++) {
+			 int last=arr[len-1];
+			 for(int j=len-1;j>0;j--) {
+				 arr[j]=arr[j-1];
+				 
+			 }
+			 arr[0]=last;
+			 
+			 
+		 }
+		 System.out.println(Arrays.toString(arr));
+		 
