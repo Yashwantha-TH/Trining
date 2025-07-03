@@ -1,0 +1,31 @@
+package hhh;
+
+public class pro13 {
+	public static void main(String[] args) {
+		int n1=145;
+		int n2=55;
+		carry(n1,n2);
+		
+	}
+	public static void carry(int n1,int n2) {
+		int left1=0,left2=0,count=0,carry=0;
+		while(n1 !=0 || n2 !=0) {
+			left1=n1%10;
+			left2=n2%10;
+			int sum=left1+ left2 + carry;
+			if(sum>=10){
+				carry=1;
+				count++;
+				
+				
+			}else {
+				carry=0;
+			}
+			n1/=10;
+			n2/=10;
+			
+		}
+		System.out.println(count);
+	}
+
+}
